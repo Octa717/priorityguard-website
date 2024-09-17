@@ -768,12 +768,15 @@ input, select, textarea {
 }
 
 
-/* WhatsApp button */
-.whatsapp-button {
+/* WhatsApp button and tooltip */
+.whatsapp-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+}
+
+.whatsapp-button {
     background-color: #25d366;
     color: #fff;
     border-radius: 50%;
@@ -783,8 +786,8 @@ input, select, textarea {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-	text-decoration: none;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -794,7 +797,77 @@ input, select, textarea {
 }
 
 .whatsapp-button i {
-	line-height: 1;
+    line-height: 1;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.whatsapp-container:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+/* Contact Info */
+#contact-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 0.9em;
+    z-index: 1000;
+}
+
+#contact-info span {
+    margin-left: 10px;
+}
+
+#contact-info span:first-child {
+    margin-left: 0;
+}
+
+#contact-info i {
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 980px) {
+    #contact-info {
+        position: static;
+        text-align: center;
+        padding: 10px 0;
+        background: rgba(40, 43, 52, 0.9);
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #contact-info {
+        font-size: 0.8em;
+    }
+    
+    #contact-info span {
+        display: block;
+        margin: 5px 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1880,6 +1953,7 @@ input, select, textarea {
 		ul.style3 {
 			list-style: none;
 			padding-left: 0;
+			color: white;
 		}
 
 			ul.style3 li {
@@ -2061,7 +2135,7 @@ input, select, textarea {
 
 	.wrapper {
 		position: relative;
-		padding: 6em 0 9em 0;
+		padding: 2em 0 5em 0;
 	}
 
 		.wrapper .title {
@@ -2125,7 +2199,7 @@ input, select, textarea {
 		.wrapper.style2 {
 			background: #282b34 url("images/overlay.png");
 			color: #eee;
-			color: rgba(255, 255, 255, 0.5)
+			color: rgb(255, 255, 255)
 		}
 
 			.wrapper.style2 .title {
@@ -2321,7 +2395,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		padding-bottom: 8em;
+		padding-bottom: 6em;
 		text-align: center;
 	}
 
