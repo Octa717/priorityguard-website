@@ -2030,7 +2030,7 @@ input, select, textarea {
 		}
 
 		.feature-list h3 {
-			color: #d7e276 !important;
+			color: #ffffff !important;
 			margin: -0.35em 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -2075,7 +2075,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Font Awesome 6 Free';
 			font-weight: 400;
 		}
 
