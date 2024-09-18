@@ -2221,6 +2221,10 @@ input, select, textarea {
 				border: solid 10px #fff;
 			}
 
+			.wrapper.style3 .image.no-border {
+				border: none;
+			}
+
 /* Page Wrapper */
 
 	#page-wrapper > section {
@@ -2444,7 +2448,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #ffffff;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
