@@ -852,10 +852,12 @@ input, select, textarea {
 /* Responsive adjustments */
 @media screen and (max-width: 980px) {
     #contact-info {
-        position: static;
+        position: absolute;
+		top: 0;
+        left: 0;
+        right: 0;
         text-align: center;
-        padding: 10px 0;
-        background: rgba(40, 43, 52, 0.9);
+        padding: 5px 0;
     }
 }
 
@@ -865,8 +867,8 @@ input, select, textarea {
     }
     
     #contact-info span {
-        display: block;
-        margin: 5px 0;
+        display: inline-block;
+        margin: 0px 5;
     }
 }
 
@@ -1796,7 +1798,15 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
+			height: auto;
+			max-height: 400px; 
+			object-fit: cover;
 			margin: 0 0 2em 0;
+		}
+
+		.image-featured-container {
+			overflow: hidden;
+			margin-bottom: 2em; 
 		}
 
 /* Button */
