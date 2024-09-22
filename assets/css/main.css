@@ -211,6 +211,7 @@ input, select, textarea {
 
 			.container {
 				width: calc(100% - 40px);
+				padding-top: 20px;
 			}
 
 		}
@@ -767,7 +768,6 @@ input, select, textarea {
     visibility: visible;
 }
 
-
 /* WhatsApp button and tooltip */
 .whatsapp-container {
     position: fixed;
@@ -873,12 +873,17 @@ input, select, textarea {
 }
 
 @media (max-width: 768px) {
-    .whatsapp-button {
+    .whatsapp-button,
+	.scroll-to-top-button {
         width: 50px;
         height: 50px;
         font-size: 25px;
         bottom: 15px;
         right: 15px;
+    }
+	.scroll-to-top-button {
+        bottom: 80px; /* Adjust this value to control spacing between buttons */
+		right: 20px;
     }
 }
 
@@ -1633,7 +1638,7 @@ input, select, textarea {
 
 	header.style1 {
 		text-align: center;
-		padding: 3em 0 3em 0;
+		padding: 0 0 0 0;
 	}
 
 		header.style1 h2 {
@@ -1799,7 +1804,7 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 			height: auto;
-			max-height: 400px; 
+			max-height: 550px; 
 			object-fit: cover;
 			margin: 0 0 2em 0;
 		}
@@ -1807,6 +1812,10 @@ input, select, textarea {
 		.image-featured-container {
 			overflow: hidden;
 			margin-bottom: 2em; 
+		}
+
+		.image.greater-max-height {
+			max-height: 570px;
 		}
 
 /* Button */
@@ -2569,6 +2578,18 @@ input, select, textarea {
 				background: #3d4249 url("images/overlay.png");
 			}
 
+			.social-icons {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			.social-icon {
+				margin-right: 15px; /* Adjust this value to increase or decrease spacing */
+			}
+			.social-icon:last-child {
+				margin-right: 0; /* Remove margin from the last icon */
+			}
+
 /* Copyright */
 
 	#copyright {
@@ -3134,11 +3155,11 @@ input, select, textarea {
 		/* Content */
 
 			#content {
-				padding: 0 0 2em 0;
+				padding: 0 0 1em 0;
 			}
 
 				#content header.style1 {
-					padding-bottom: 2.5em;
+					padding-bottom: 1em;
 				}
 
 		/* Footer */
