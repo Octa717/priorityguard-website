@@ -14,7 +14,7 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="submit-form.php">
+										<form id="contact-form" method="post" action="submit-form.php">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-small">
 													<input type="text" name="name" id="contact-name" placeholder="Nume (obligatoriu)" required/>
@@ -39,6 +39,7 @@
 												</div>
 											</div>
 										</form>
+										<p id="form-response-message" class="style3"><p/>
 									</section>
 
 							</div>
@@ -99,4 +100,30 @@
 							</ul>
 						</div>
 					</div>
+
+					<script>
+						document.getElementById('contact-form').addEventListener('submit', function(event) {
+							event.preventDefault(); 
+						
+							const formData = new FormData(this); 
+						
+							fetch('submit-form.php', {
+								method: 'POST',
+								body: formData
+							})
+							.then(response => {
+								if (!response.ok) {
+									throw new Error('A apărut o eroare');
+								}
+								return response.text(); 
+							})
+							.then(data => {
+								document.getElementById('form-response-message').innerText = 'Mesaj trimis cu succes!'; 
+								document.getElementById('contact-form').reset(); 
+							})
+							.catch(error => {
+								document.getElementById('response-message').innerText = 'A apărut o eroare: ' + error.message; 
+							});
+						});
+					</script>
 </html>
