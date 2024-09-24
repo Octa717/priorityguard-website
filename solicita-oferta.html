@@ -134,30 +134,6 @@
 		<script src="/assets/js/util.js"></script>
 		<script src="/assets/js/fetch-header.js"></script>
 		<script src="/assets/js/scroll-to-top.js"></script>
-		<script>
-			document.getElementById('contact-form').addEventListener('submit', function(event) {
-				event.preventDefault(); 
-			
-				const formData = new FormData(this); 
-			
-				fetch('submit-form.php', {
-					method: 'POST',
-					body: formData
-				})
-				.then(response => {
-					if (!response.ok) {
-						throw new Error('A apărut o eroare');
-					}
-					return response.text(); 
-				})
-				.then(data => {
-					document.getElementById('form-response-message').innerText = 'Mesaj trimis cu succes!'; 
-					document.getElementById('contact-form').reset(); 
-				})
-				.catch(error => {
-					document.getElementById('response-message').innerText = 'A apărut o eroare: ' + error.message; 
-				});
-			});
-		</script>
+		<script src="/assets/js/form-handling.js"></script>
 	</body>
 </html>
