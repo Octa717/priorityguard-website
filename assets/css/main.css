@@ -1870,7 +1870,7 @@ input, select, textarea {
 		button.style1,
 		.button.style1 {
 			background: #d7e276 url("images/overlay.png");
-			color: #282b34;
+			color: #342828;
 		}
 
 			input[type="button"].style1:hover,
@@ -2537,6 +2537,9 @@ input, select, textarea {
 			}
 			#footer input[type="submit"].style1 {
     			color: #282b34;
+			}
+			#footer input[type="submit"].style1:hover {
+    			color: #d7e276;
 			}
 
 			#footer input[type="button"].style2:active,
