@@ -834,7 +834,7 @@ input, select, textarea {
     right: 10px;
     color: #fff;
     font-size: 0.9em;
-    z-index: 1000;
+	z-index: 10003;
 }
 
 #contact-info span {
@@ -847,6 +847,10 @@ input, select, textarea {
 
 #contact-info i {
     margin-right: 5px;
+}
+
+#contact-info a {
+    color: #fff;
 }
 
 /* Responsive adjustments */
